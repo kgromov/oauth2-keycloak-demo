@@ -1,0 +1,15 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          login-client:
+            client-id: login-client
+            client-secret: xtdoU6ErUR1LRjsvcEHQlJXSyb4KcaAs
+            scope: openid, person::search, person::metrics
+            authorization-grant-type: authorization_code
+            redirect-uri: http://localhost:8080/login/oauth2/code/login-client
+            provider: keycloak
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:9000/auth/realms/oauth-demo
