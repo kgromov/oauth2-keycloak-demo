@@ -10,6 +10,13 @@ spring:
             authorization-grant-type: authorization_code
             redirect-uri: http://localhost:8080/login/oauth2/code/login-client
             provider: keycloak
+          greeting-client:
+            client-id: greeting-client
+            client-secret: sPSJCT8ejcIljwpRPdNc5hjr6vD8djZo
+            scope: openid, person::search, person::metrics
+            authorization-grant-type: authorization_code
+            redirect-uri: http://localhost:8080/greeting-flow
+            provider: keycloak
         provider:
           keycloak:
             issuer-uri: http://localhost:9000/auth/realms/oauth-demo
